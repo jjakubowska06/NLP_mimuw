@@ -372,7 +372,7 @@ class NMT(nn.Module):
         # YOUR CODE HERE
         # TODO:
         # 1. Apply softmax to e_t to yield alpha_t
-        alpha_t = F.softmax(e_t)
+        alpha_t = F.softmax(e_t, dim=-1)
 
         # 2. Use batched matrix multiplication between alpha_t and enc_hiddens to obtain the
         # attention output vector, a_t.
